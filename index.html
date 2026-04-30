@@ -674,9 +674,9 @@ function renderHistory() {
   if (prodFilter) txs = txs.filter(t => t.productName === prodFilter);
 
   const typeMap = {
-    in:     { icon: '📥', label: '進貨', bg: 'var(--green-soft)',  color: 'var(--green)',  cls: 'in',     sign: '+' },
-    out:    { icon: '📤', label: '出貨', bg: 'var(--accent-soft)', color: 'var(--accent)', cls: 'out-tx', sign: '-' },
-    adjust: { icon: '⚖️', label: '調整', bg: '#e8e8f5',           color: '#4a4a8f',       cls: 'adj',    sign: '' }
+    in:     { icon: '✅', label: '進貨', bg: 'var(--green-soft)',  color: 'var(--green)',  cls: 'in',     sign: '+' },
+    out:    { icon: '⛔️', label: '出貨', bg: 'var(--accent-soft)', color: 'var(--accent)', cls: 'out-tx', sign: '-' },
+    adjust: { icon: '🔷', label: '調整', bg: '#e8e8f5',           color: '#4a4a8f',       cls: 'adj',    sign: '' }
   };
 
   const container = document.getElementById('historyList');
