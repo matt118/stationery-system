@@ -7,19 +7,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f0f7f4;
+  --bg: #f4f4f4;
   --paper: #ffffff;
-  --ink: #1a2e24;
-  --ink-light: #16a085;
-  --ink-faint: #8aab99;
-  --accent: #2a7d5c;
-  --accent-soft: #d4eddf;
-  --green: #1a9e6a;
-  --green-soft: #d0f0e4;
-  --amber: #d4900a;
-  --amber-soft: #fef3d0;
-  --line: #c8e0d4;
-  --shadow: rgba(42, 100, 74, 0.12);
+  --ink: #111111;
+  --ink-light: #444444;
+  --ink-faint: #999999;
+  --accent: #111111;
+  --accent-soft: #eeeeee;
+  --green: #2e7d32;
+  --green-soft: #e8f5e9;
+  --amber: #e65100;
+  --amber-soft: #fff3e0;
+  --line: #dddddd;
+  --shadow: rgba(0, 0, 0, 0.08);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -189,10 +189,9 @@
 
 <div class="tabs">
   <button class="tab-btn active" onclick="switchTab('inventory', this)">📦 商品庫存</button>
-  <button class="tab-btn" onclick="switchTab('stock-in', this)">📥 進貨記錄</button>
-  <button class="tab-btn" onclick="switchTab('stock-out', this)">📤 出貨記錄</button>
+  <button class="tab-btn" onclick="switchTab('stock-in', this)">➕ 進貨記錄</button>
+  <button class="tab-btn" onclick="switchTab('stock-out', this)">➖ 出貨記錄</button>
   <button class="tab-btn" onclick="switchTab('history', this)">📋 異動歷史</button>
-  <button class="tab-btn" onclick="switchTab('settings', this)">⚙️ 設定</button>
 </div>
 
 <main>
@@ -327,13 +326,6 @@
     <div class="table-wrap" id="historyList"></div>
   </div>
 
-    <div class="section-header" style="margin-top:32px;"><div class="section-title">Google Sheet 欄位說明</div></div>
-    <div class="card-form" style="max-width:680px;font-size:13px;line-height:2;">
-      <strong>工作表 1：商品庫存</strong><br>
-      id · name · category · unit · qty · safe · note · createdAt<br><br>
-      <strong>工作表 2：異動記錄</strong><br>
-      id · type · productId · productName · qty · date · supplier · customer · note · 時間戳<br><br>
-      <span style="color:var(--ink-faint);">以上工作表與欄位由 GAS 腳本自動建立，無需手動設定。</span>
     </div>
   </div>
 </main>
