@@ -27,8 +27,6 @@
     background: var(--bg);
     color: var(--ink);
     min-height: 100vh;
-    background-image: repeating-linear-gradient(0deg, transparent, transparent 31px, var(--line) 31px, var(--line) 32px);
-    background-size: 100% 32px;
   }
   header {
     background: var(--ink); color: var(--bg);
@@ -330,19 +328,6 @@
   </div>
 
   <!-- ─── 設定頁 ─── -->
-  <div id="page-settings" class="page">
-    <div class="section-header"><div class="section-title">API 連線設定</div></div>
-    <div class="card-form" style="max-width:680px;">
-      <div class="form-group">
-        <label class="form-label">Google Apps Script 網頁應用程式 URL</label>
-        <input type="text" id="settingsApiUrl" placeholder="https://script.google.com/macros/s/…/exec">
-        <div style="font-size:12px;color:var(--ink-faint);margin-top:6px;">
-          請將 GAS 部署後產生的 URL 貼入此處，儲存後即自動重新整理資料。
-        </div>
-      </div>
-      <button class="btn btn-primary" onclick="saveApiUrl()">💾 儲存並連線</button>
-      <button class="btn btn-ghost" onclick="clearApiUrl()" style="margin-left:8px;">清除設定</button>
-    </div>
 
     <div class="section-header" style="margin-top:32px;"><div class="section-title">Google Sheet 欄位說明</div></div>
     <div class="card-form" style="max-width:680px;font-size:13px;line-height:2;">
